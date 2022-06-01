@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'OpenIMSDKCore'
+  s.name             = 'OpenIMCore'
   s.version          = '2.0.9+5'
   s.summary          = 'Open-IM-SDK-Core'
 
@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
   OpenIM：由前微信技术专家打造的基于 Go 实现的即时通讯（IM）项目，iOS版本IM SDK 可以轻松替代第三方IM云服务，打造具备聊天、社交功能的app。
                        DESC
 
-  s.homepage         = 'https://github.com/OpenIMSDK/Open-IM-SDK-iOS'
+  s.homepage         = 'https://github.com/RejectMediocrity/OpenImCoreSpec'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'OpenIMSDKCore' => 'https://github.com/std-s/Open-IM-SDK-Core' }
-  s.source           = { :git => 'https://github.com/std-s/Open-IM-SDK-Core.git', :tag => s.version.to_s }
+  s.author           = { 'OpenIMSDKCore' => 'https://github.com/RejectMediocrity/OpenImCore' }
+  s.source           = { :git => 'https://github.com/RejectMediocrity/OpenImCore.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'    
     
