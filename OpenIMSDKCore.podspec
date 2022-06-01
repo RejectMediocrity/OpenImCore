@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'OpenIMCore'
+  s.name             = 'OpenIMSDKCore'
   s.version          = '2.0.9+5'
   s.summary          = 'Open-IM-SDK-Core'
 
