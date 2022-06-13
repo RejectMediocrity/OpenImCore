@@ -127,7 +127,7 @@ FOUNDATION_EXPORT void Open_im_sdkGetConversationRecvMessageOpt(id<Open_im_sdk_c
 
 FOUNDATION_EXPORT void Open_im_sdkGetDepartmentMember(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable departmentID, long offset, long count);
 
-FOUNDATION_EXPORT void Open_im_sdkGetDepartmentMemberAndSubDepartment(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable departmentID);
+FOUNDATION_EXPORT void Open_im_sdkGetDepartmentMemberAndSubDepartment(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable departmentID, long departmentOffset, long departmentCount, long memberOffset, long memberCount);
 
 FOUNDATION_EXPORT void Open_im_sdkGetDesignatedFriendsInfo(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable userIDList);
 
@@ -295,8 +295,6 @@ FOUNDATION_EXPORT void Open_im_sdkSignalingReject(id<Open_im_sdk_callbackBase> _
 FOUNDATION_EXPORT void Open_im_sdkTransferGroupOwner(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID, NSString* _Nullable newOwnerUserID);
 
 FOUNDATION_EXPORT void Open_im_sdkTypingStatusUpdate(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable recvID, NSString* _Nullable msgTip);
-
-FOUNDATION_EXPORT void Open_im_sdkUploadFile(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable filePath);
 
 FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkUploadImage(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable filePath, NSString* _Nullable token, NSString* _Nullable obj);
 

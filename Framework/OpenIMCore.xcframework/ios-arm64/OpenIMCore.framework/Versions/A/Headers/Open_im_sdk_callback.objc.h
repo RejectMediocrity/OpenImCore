@@ -50,7 +50,10 @@
 - (void)onConnectFailed:(int32_t)errCode errMsg:(NSString* _Nullable)errMsg;
 - (void)onConnectSuccess;
 - (void)onConnecting;
+- (void)onKickedFromMobile;
 - (void)onKickedOffline;
+- (void)onPingPing;
+- (void)onUpgradeNotice;
 - (void)onUserTokenExpired;
 @end
 
@@ -167,7 +170,10 @@
 - (void)onConnectFailed:(int32_t)errCode errMsg:(NSString* _Nullable)errMsg;
 - (void)onConnectSuccess;
 - (void)onConnecting;
+- (void)onKickedFromMobile;
 - (void)onKickedOffline;
+- (void)onPingPing;
+- (void)onUpgradeNotice;
 - (void)onUserTokenExpired;
 @end
 
