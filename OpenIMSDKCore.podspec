@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'OpenIMSDKCore'
-  s.version          = '2.0.9+5.2'
+  s.name             = 'MindIMSDKCore'
+  s.version          = '2.0.9+5.3'
   s.summary          = 'Open-IM-SDK-Core'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/RejectMediocrity/OpenImCoreSpec'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'OpenIMSDKCore' => 'https://github.com/RejectMediocrity/OpenImCore' }
+  s.author           = { 'MindIMSDKCore' => 'https://github.com/RejectMediocrity/OpenImCore' }
   s.source           = { :git => 'https://github.com/RejectMediocrity/OpenImCore.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'    
