@@ -88,7 +88,6 @@
 - (void)onGroupMemberInfoChanged:(NSString* _Nullable)groupMemberInfo;
 - (void)onJoinedGroupAdded:(NSString* _Nullable)groupInfo;
 - (void)onJoinedGroupDeleted:(NSString* _Nullable)groupInfo;
-- (void)onUserQuit:(NSString* _Nullable)userInfo;
 @end
 
 @protocol Open_im_sdk_callbackOnOrganizationListener <NSObject>
@@ -108,7 +107,6 @@
 
 @protocol Open_im_sdk_callbackOnUserListener <NSObject>
 - (void)onSelfInfoUpdated:(NSString* _Nullable)userInfo;
-- (void)onUserQuit:(NSString* _Nullable)userInfo;
 @end
 
 @protocol Open_im_sdk_callbackOnWorkMomentsListener <NSObject>
@@ -221,7 +219,6 @@
 - (void)onGroupMemberInfoChanged:(NSString* _Nullable)groupMemberInfo;
 - (void)onJoinedGroupAdded:(NSString* _Nullable)groupInfo;
 - (void)onJoinedGroupDeleted:(NSString* _Nullable)groupInfo;
-- (void)onUserQuit:(NSString* _Nullable)userInfo;
 @end
 
 @interface Open_im_sdk_callbackOnOrganizationListener : NSObject <goSeqRefInterface, Open_im_sdk_callbackOnOrganizationListener> {
@@ -253,7 +250,6 @@
 
 - (nonnull instancetype)initWithRef:(_Nonnull id)ref;
 - (void)onSelfInfoUpdated:(NSString* _Nullable)userInfo;
-- (void)onUserQuit:(NSString* _Nullable)userInfo;
 @end
 
 @interface Open_im_sdk_callbackOnWorkMomentsListener : NSObject <goSeqRefInterface, Open_im_sdk_callbackOnWorkMomentsListener> {
