@@ -130,6 +130,9 @@ pod repo push MindImCoreSpec ${pod_spec_name} --allow-warnings
 
 echo "\n****** ${pod_spec_name} ${pod_spec_version} end ****** \n"
 
+echo "\n****** pod repo update ****** \n"
+pod repo update
+
 echo "****** end ******"
 
 
