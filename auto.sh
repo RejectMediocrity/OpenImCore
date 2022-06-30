@@ -103,13 +103,6 @@ git status
 echo "git commit -m ${git_commit_des}"
 git commit -m ${git_commit_des}
 
-
-echo "\n ------ 执行 pod 本地校验 ------ \n"
-# pod 本地校验
-echo "pod lib lint --allow-warnings --verbose"
-pod spec lint ${pod_spec_name} --allow-warnings --verbose
-
-
 echo "\n ------ 执行 git 打标签tag，并推送到远端 ------ \n"
 # git推送到远端
 echo "git tag ${pod_spec_version}"
@@ -117,6 +110,10 @@ git tag ${pod_spec_version}
 echo "git push origin master --tags"
 git push origin main --tags
 
+echo "\n ------ 执行 pod 本地校验 ------ \n"
+# pod 本地校验
+echo "pod spec lint --allow-warnings --verbose"
+pod spec lint ${pod_spec_name} --allow-warnings --verbose
 
 echo "\n ------ 执行 pod 远端校验 ------ \n"
 # pod 远端校验
