@@ -222,6 +222,11 @@ FOUNDATION_EXPORT void Open_im_sdkMarkMessageAsReadByConID(id<Open_im_sdk_callba
 
 FOUNDATION_EXPORT void Open_im_sdkPinConversation(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable conversationID, BOOL isPinned);
 
+/**
+ * QuickReply 快捷回复
+ */
+FOUNDATION_EXPORT void Open_im_sdkQuickReply(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable serverMsgID, NSString* _Nullable expression, long cancel, NSString* _Nullable operationID);
+
 FOUNDATION_EXPORT void Open_im_sdkQuitGroup(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID);
 
 FOUNDATION_EXPORT void Open_im_sdkRefuseFriendApplication(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable userIDHandleMsg);
@@ -231,6 +236,11 @@ FOUNDATION_EXPORT void Open_im_sdkRefuseGroupApplication(id<Open_im_sdk_callback
 FOUNDATION_EXPORT void Open_im_sdkRemoveBlack(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable removeUserID);
 
 FOUNDATION_EXPORT void Open_im_sdkResetConversationGroupAtType(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable conversationID);
+
+/**
+ * ResetConversationUnreadMsgTotal 重置消息未读数
+ */
+FOUNDATION_EXPORT void Open_im_sdkResetConversationUnreadMsgTotal(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable conversationID, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkRevokeMessage(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message);
 
