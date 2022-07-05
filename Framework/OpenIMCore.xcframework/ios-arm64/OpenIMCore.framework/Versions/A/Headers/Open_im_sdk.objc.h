@@ -322,7 +322,10 @@ FOUNDATION_EXPORT void Open_im_sdkTransferGroupOwner(id<Open_im_sdk_callbackBase
 
 FOUNDATION_EXPORT void Open_im_sdkTypingStatusUpdate(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable recvID, NSString* _Nullable msgTip);
 
-FOUNDATION_EXPORT void Open_im_sdkUpdateMessageExBySourceID(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable sourceID, NSString* _Nullable ex, NSString* _Nullable operationID, int32_t sessionType);
+/**
+ * 更新本地数据库ex字段
+ */
+FOUNDATION_EXPORT void Open_im_sdkUpdateMessageExBySourceID(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable clientMsgID, NSString* _Nullable serverMsgID, NSString* _Nullable ex, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkUploadFile(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable filePath);
 
