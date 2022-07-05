@@ -225,7 +225,7 @@ FOUNDATION_EXPORT void Open_im_sdkPinConversation(id<Open_im_sdk_callbackBase> _
 /**
  * QuickReply 快捷回复
  */
-FOUNDATION_EXPORT void Open_im_sdkQuickReply(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable serverMsgID, NSString* _Nullable expression, long cancel, NSString* _Nullable operationID);
+FOUNDATION_EXPORT void Open_im_sdkQuickReply(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable clientMsgID, NSString* _Nullable expression, long cancel, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkQuitGroup(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID);
 
@@ -321,11 +321,6 @@ FOUNDATION_EXPORT void Open_im_sdkSignalingReject(id<Open_im_sdk_callbackBase> _
 FOUNDATION_EXPORT void Open_im_sdkTransferGroupOwner(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID, NSString* _Nullable newOwnerUserID);
 
 FOUNDATION_EXPORT void Open_im_sdkTypingStatusUpdate(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable recvID, NSString* _Nullable msgTip);
-
-/**
- * 更新本地数据库ex字段
- */
-FOUNDATION_EXPORT void Open_im_sdkUpdateMessageExBySourceID(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable clientMsgID, NSString* _Nullable serverMsgID, NSString* _Nullable ex, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkUploadFile(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable filePath);
 
