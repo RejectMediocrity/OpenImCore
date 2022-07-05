@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MindIMSDKCore'
-  s.version          = '2.2.0.8'
+  s.version          = '2.2.0.9'
   s.summary          = 'Open-IM-SDK-Core'
 
 # This description is used to generate tags and improve search results.
