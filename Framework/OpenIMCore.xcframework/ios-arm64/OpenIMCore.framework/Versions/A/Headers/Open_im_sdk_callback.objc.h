@@ -42,8 +42,12 @@
 @end
 
 @protocol Open_im_sdk_callbackOnAdvancedMsgListener <NSObject>
+- (void)onNewRecvMessageRevoked:(NSString* _Nullable)messageRevoked;
 - (void)onRecvC2CReadReceipt:(NSString* _Nullable)msgReceiptList;
 - (void)onRecvGroupReadReceipt:(NSString* _Nullable)groupMsgReceiptList;
+/**
+ * deprecated
+ */
 - (void)onRecvMessageRevoked:(NSString* _Nullable)msgID;
 - (void)onRecvNewMessage:(NSString* _Nullable)message;
 @end
@@ -168,8 +172,12 @@
 @property(strong, readonly) _Nonnull id _ref;
 
 - (nonnull instancetype)initWithRef:(_Nonnull id)ref;
+- (void)onNewRecvMessageRevoked:(NSString* _Nullable)messageRevoked;
 - (void)onRecvC2CReadReceipt:(NSString* _Nullable)msgReceiptList;
 - (void)onRecvGroupReadReceipt:(NSString* _Nullable)groupMsgReceiptList;
+/**
+ * deprecated
+ */
 - (void)onRecvMessageRevoked:(NSString* _Nullable)msgID;
 - (void)onRecvNewMessage:(NSString* _Nullable)message;
 @end
