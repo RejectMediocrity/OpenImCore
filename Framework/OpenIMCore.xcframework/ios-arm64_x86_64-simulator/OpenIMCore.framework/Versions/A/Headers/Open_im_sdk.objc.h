@@ -163,6 +163,11 @@ FOUNDATION_EXPORT void Open_im_sdkGetOneConversation(id<Open_im_sdk_callbackBase
 
 FOUNDATION_EXPORT void Open_im_sdkGetParentDepartmentList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable departmentID);
 
+/**
+ * GetQuoteMessageReplyList 获取消息回复列表
+ */
+FOUNDATION_EXPORT void Open_im_sdkGetQuoteMessageReplyList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable getMessageOptions);
+
 FOUNDATION_EXPORT void Open_im_sdkGetRecvFriendApplicationList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkGetRecvGroupApplicationList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
