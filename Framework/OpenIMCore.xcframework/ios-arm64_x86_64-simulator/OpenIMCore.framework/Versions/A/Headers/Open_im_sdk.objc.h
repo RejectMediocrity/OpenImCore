@@ -277,6 +277,11 @@ FOUNDATION_EXPORT void Open_im_sdkSendMessage(id<Open_im_sdk_callbackSendMsgCall
 
 FOUNDATION_EXPORT void Open_im_sdkSendMessageNotOss(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message, NSString* _Nullable recvID, NSString* _Nullable groupID, NSString* _Nullable offlinePushInfo);
 
+/**
+ * SendUploadMessage 上传图片/音视频/文件
+ */
+FOUNDATION_EXPORT void Open_im_sdkSendUploadMessage(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message);
+
 FOUNDATION_EXPORT void Open_im_sdkSetAdvancedMsgListener(id<Open_im_sdk_callbackOnAdvancedMsgListener> _Nullable listener);
 
 FOUNDATION_EXPORT void Open_im_sdkSetBatchMsgListener(id<Open_im_sdk_callbackOnBatchMsgListener> _Nullable listener);
