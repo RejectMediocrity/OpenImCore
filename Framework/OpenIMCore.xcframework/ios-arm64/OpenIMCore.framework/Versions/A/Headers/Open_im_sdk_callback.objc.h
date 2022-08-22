@@ -125,7 +125,7 @@
 @end
 
 @protocol Open_im_sdk_callbackOnWorkMomentsListener <NSObject>
-- (void)onRecvNewNotification;
+- (void)onRecvNewNotification:(NSString* _Nullable)message;
 @end
 
 @protocol Open_im_sdk_callbackSendMsgCallBack <NSObject>
@@ -291,7 +291,7 @@
 @property(strong, readonly) _Nonnull id _ref;
 
 - (nonnull instancetype)initWithRef:(_Nonnull id)ref;
-- (void)onRecvNewNotification;
+- (void)onRecvNewNotification:(NSString* _Nullable)message;
 @end
 
 @interface Open_im_sdk_callbackSendMsgCallBack : NSObject <goSeqRefInterface, Open_im_sdk_callbackSendMsgCallBack> {
