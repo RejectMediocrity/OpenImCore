@@ -114,6 +114,11 @@ FOUNDATION_EXPORT void Open_im_sdkDismissGroup(id<Open_im_sdk_callbackBase> _Nul
 
 FOUNDATION_EXPORT void Open_im_sdkGetAllConversationList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
 
+/**
+ * GetArchivedConversationList 获取已归档话题
+ */
+FOUNDATION_EXPORT void Open_im_sdkGetArchivedConversationList(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID);
+
 FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkGetAtAllTag(void);
 
 FOUNDATION_EXPORT void Open_im_sdkGetBlackList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
