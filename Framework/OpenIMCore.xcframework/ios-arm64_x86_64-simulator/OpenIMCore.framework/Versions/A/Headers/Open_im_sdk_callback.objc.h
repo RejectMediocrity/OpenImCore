@@ -62,6 +62,7 @@
 - (void)onConnecting;
 - (void)onKickedFromMobile;
 - (void)onKickedOffline;
+- (void)onOrgTreeNotice:(NSString* _Nullable)operationID data:(NSData* _Nullable)data;
 - (void)onUpgradeNotice;
 - (void)onUserTokenExpired;
 @end
@@ -200,6 +201,7 @@
 - (void)onConnecting;
 - (void)onKickedFromMobile;
 - (void)onKickedOffline;
+- (void)onOrgTreeNotice:(NSString* _Nullable)operationID data:(NSData* _Nullable)data;
 - (void)onUpgradeNotice;
 - (void)onUserTokenExpired;
 @end
