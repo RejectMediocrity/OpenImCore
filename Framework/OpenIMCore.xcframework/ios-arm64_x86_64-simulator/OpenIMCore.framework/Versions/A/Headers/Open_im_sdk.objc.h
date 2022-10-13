@@ -128,6 +128,11 @@ FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkGetConversationIDBySessionType(N
 FOUNDATION_EXPORT void Open_im_sdkGetConversationListSplit(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, long offset, long count);
 
 /**
+ * GetConversationMsgTotal 获取会话消息总数
+ */
+FOUNDATION_EXPORT void Open_im_sdkGetConversationMsgTotal(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable params);
+
+/**
  * deprecated
  */
 FOUNDATION_EXPORT void Open_im_sdkGetConversationRecvMessageOpt(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable conversationIDList);
