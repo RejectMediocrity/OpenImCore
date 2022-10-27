@@ -36,7 +36,7 @@ FOUNDATION_EXPORT void Open_im_sdkCheckFriend(id<Open_im_sdk_callbackBase> _Null
 // skipped function CheckResourceLoad with unsupported parameter or return types
 
 
-FOUNDATION_EXPORT BOOL Open_im_sdkCheckToken(NSString* _Nullable userID, NSString* _Nullable token, NSError* _Nullable* _Nullable error);
+FOUNDATION_EXPORT BOOL Open_im_sdkCheckToken(NSString* _Nullable userID, NSString* _Nullable token, NSString* _Nullable operationID, NSError* _Nullable* _Nullable error);
 
 FOUNDATION_EXPORT void Open_im_sdkClearC2CHistoryMessage(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable userID);
 
@@ -47,6 +47,8 @@ FOUNDATION_EXPORT void Open_im_sdkClearGroupHistoryMessage(id<Open_im_sdk_callba
 FOUNDATION_EXPORT void Open_im_sdkClearGroupHistoryMessageFromLocalAndSvr(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID);
 
 FOUNDATION_EXPORT void Open_im_sdkClearWorkMomentsNotification(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
+
+FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkCreateAdvancedQuoteMessage(NSString* _Nullable operationID, NSString* _Nullable text, NSString* _Nullable message, NSString* _Nullable messageEntityList);
 
 FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkCreateAdvancedTextMessage(NSString* _Nullable operationID, NSString* _Nullable text, NSString* _Nullable messageEntityList);
 
@@ -111,6 +113,10 @@ FOUNDATION_EXPORT void Open_im_sdkDeleteMessageFromLocalAndSvr(id<Open_im_sdk_ca
 FOUNDATION_EXPORT void Open_im_sdkDeleteMessageFromLocalStorage(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message);
 
 FOUNDATION_EXPORT void Open_im_sdkDismissGroup(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID);
+
+FOUNDATION_EXPORT void Open_im_sdkFindMessageList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable findMessageOptions);
+
+FOUNDATION_EXPORT void Open_im_sdkGetAdvancedHistoryMessageList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable getMessageOptions);
 
 FOUNDATION_EXPORT void Open_im_sdkGetAllConversationList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
 
@@ -182,11 +188,6 @@ FOUNDATION_EXPORT void Open_im_sdkGetMultipleConversation(id<Open_im_sdk_callbac
 FOUNDATION_EXPORT void Open_im_sdkGetOneConversation(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, long sessionType, NSString* _Nullable sourceID);
 
 FOUNDATION_EXPORT void Open_im_sdkGetParentDepartmentList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable departmentID);
-
-/**
- * GetQuoteMessageReplyList 获取消息回复列表
- */
-FOUNDATION_EXPORT void Open_im_sdkGetQuoteMessageReplyList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable getMessageOptions);
 
 FOUNDATION_EXPORT void Open_im_sdkGetRecvFriendApplicationList(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID);
 
@@ -287,6 +288,11 @@ FOUNDATION_EXPORT NSString* _Nonnull Open_im_sdkSdkVersion(void);
 
 FOUNDATION_EXPORT void Open_im_sdkSearchFriends(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable searchParam);
 
+/**
+ * SearchGroupMembers
+ */
+FOUNDATION_EXPORT void Open_im_sdkSearchGroupMembers(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable searchParam);
+
 FOUNDATION_EXPORT void Open_im_sdkSearchGroups(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable searchParam);
 
 FOUNDATION_EXPORT void Open_im_sdkSearchLocalMessages(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable searchParam);
@@ -303,6 +309,8 @@ FOUNDATION_EXPORT void Open_im_sdkSendMessageNotOss(id<Open_im_sdk_callbackSendM
 FOUNDATION_EXPORT void Open_im_sdkSendUploadMessage(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message);
 
 FOUNDATION_EXPORT void Open_im_sdkSetAdvancedMsgListener(id<Open_im_sdk_callbackOnAdvancedMsgListener> _Nullable listener);
+
+FOUNDATION_EXPORT void Open_im_sdkSetAppBadge(id<Open_im_sdk_callbackBase> _Nullable callback, int32_t appUnreadCount, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkSetBatchMsgListener(id<Open_im_sdk_callbackOnBatchMsgListener> _Nullable listener);
 
@@ -350,6 +358,8 @@ FOUNDATION_EXPORT void Open_im_sdkSetSelfInfo(id<Open_im_sdk_callbackBase> _Null
  */
 FOUNDATION_EXPORT void Open_im_sdkSetSignalingListener(id<Open_im_sdk_callbackOnSignalingListener> _Nullable callback);
 
+FOUNDATION_EXPORT void Open_im_sdkSetSignalingListenerForService(id<Open_im_sdk_callbackOnSignalingListener> _Nullable callback);
+
 FOUNDATION_EXPORT void Open_im_sdkSetUserListener(id<Open_im_sdk_callbackOnUserListener> _Nullable listener);
 
 FOUNDATION_EXPORT void Open_im_sdkSetWorkMomentsListener(id<Open_im_sdk_callbackOnWorkMomentsListener> _Nullable listener);
@@ -369,6 +379,8 @@ FOUNDATION_EXPORT void Open_im_sdkSignalingReject(id<Open_im_sdk_callbackBase> _
 FOUNDATION_EXPORT void Open_im_sdkTransferGroupOwner(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable groupID, NSString* _Nullable newOwnerUserID);
 
 FOUNDATION_EXPORT void Open_im_sdkTypingStatusUpdate(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable recvID, NSString* _Nullable msgTip);
+
+FOUNDATION_EXPORT void Open_im_sdkUpdateFcmToken(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable fmcToken, NSString* _Nullable operationID);
 
 FOUNDATION_EXPORT void Open_im_sdkUploadFile(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable filePath);
 
